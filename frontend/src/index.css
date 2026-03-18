@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --color-void: 64 40% 12%;
+    --color-soil: 62 32% 23%;
+    --color-bark: 62 33% 23%;
+    --color-moss: 62 36% 25%;
+    --color-stone: 63 42% 30%;
+    --color-fern: 67 44% 37%;
+    --color-sage: 72 44% 46%;
+    --color-lime: 72 42% 54%;
+    --color-glow: 72 40% 65%;
+    --color-text: 72 35% 87%;
+    --color-muted-text: 72 20% 55%;
+
+    --background: 64 40% 12%;
+    --foreground: 72 35% 87%;
+
+    --card: 62 32% 23%;
+    --card-foreground: 72 35% 87%;
+
+    --popover: 62 32% 23%;
+    --popover-foreground: 72 35% 87%;
+
+    --primary: 72 42% 54%;
+    --primary-foreground: 64 40% 12%;
+
+    --secondary: 62 36% 25%;
+    --secondary-foreground: 72 35% 87%;
+
+    --muted: 62 36% 25%;
+    --muted-foreground: 72 20% 55%;
+
+    --accent: 72 42% 54%;
+    --accent-foreground: 64 40% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 72 42% 54%;
+    --success-foreground: 64 40% 12%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 0%;
+
+    --border: 62 36% 25%;
+    --input: 62 36% 25%;
+    --ring: 72 42% 54%;
+
+    --radius: 4px;
+
+    --sidebar-background: 62 32% 23%;
+    --sidebar-foreground: 72 35% 87%;
+    --sidebar-primary: 72 42% 54%;
+    --sidebar-primary-foreground: 64 40% 12%;
+    --sidebar-accent: 62 36% 25%;
+    --sidebar-accent-foreground: 72 35% 87%;
+    --sidebar-border: 62 36% 25%;
+    --sidebar-ring: 72 42% 54%;
+
+    --surface: 62 32% 23%;
+  }
+
+  .dark {
+    --background: 64 40% 12%;
+    --foreground: 72 35% 87%;
+    --card: 62 32% 23%;
+    --card-foreground: 72 35% 87%;
+    --popover: 62 32% 23%;
+    --popover-foreground: 72 35% 87%;
+    --primary: 72 42% 54%;
+    --primary-foreground: 64 40% 12%;
+    --secondary: 62 36% 25%;
+    --secondary-foreground: 72 35% 87%;
+    --muted: 62 36% 25%;
+    --muted-foreground: 72 20% 55%;
+    --accent: 72 42% 54%;
+    --accent-foreground: 64 40% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 62 36% 25%;
+    --input: 62 36% 25%;
+    --ring: 72 42% 54%;
+    --sidebar-background: 62 32% 23%;
+    --sidebar-foreground: 72 35% 87%;
+    --sidebar-primary: 72 42% 54%;
+    --sidebar-primary-foreground: 64 40% 12%;
+    --sidebar-accent: 62 36% 25%;
+    --sidebar-accent-foreground: 72 35% 87%;
+    --sidebar-border: 62 36% 25%;
+    --sidebar-ring: 72 42% 54%;
+    --surface: 62 32% 23%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: hsl(var(--color-void));
+    background-image: radial-gradient(circle, hsl(var(--color-soil)) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted));
+    border-radius: 3px;
+  }
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes bounce-arrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-bar {
+  0%, 100% { transform: scaleX(0.3); opacity: 0.5; }
+  50% { transform: scaleX(1); opacity: 1; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
