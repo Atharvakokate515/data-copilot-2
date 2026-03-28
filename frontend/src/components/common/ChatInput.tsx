@@ -30,7 +30,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSend, placeholder = "Type a mes
         type="submit"
         disabled={disabled || !text.trim()}
         className="p-2.5 bg-primary text-primary-foreground rounded-[4px] hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 hover:shadow-lg hover:shadow-primary/25"
-      >
+      > 
         <Send size={18} />
       </button>
     </form>
