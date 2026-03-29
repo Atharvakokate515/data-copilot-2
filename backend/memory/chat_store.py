@@ -75,7 +75,7 @@ def save_message(chat_id: int, role: str, content: str, tool_used: str = None) -
             session_id=chat_id,
             role=role,
             content=content,
-            tool_used=tool_used,
+            tool_used=tool_used, 
         ))
         db.commit()
     finally:
