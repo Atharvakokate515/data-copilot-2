@@ -7,7 +7,7 @@ from llm.synthesis_prompt import SYNTHESIS_PROMPT
 # Uncomment when upgrading to Claude or GPT-4.
 # from llm.synthesis_prompt import REASONING_PROMPT
 # from langchain_core.prompts import PromptTemplate
-# import json
+# import json 
 #
 # def run_reasoning_layer(user_query, sql_results, rag_context):
 #     prompt = PromptTemplate(
