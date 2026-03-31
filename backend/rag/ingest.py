@@ -39,7 +39,7 @@ _SECTION_SPLITTER = RecursiveCharacterTextSplitter(
     length_function=len
 )
 
-# Fallback: sentence-aware for dense unstructured text
+# Fallback: sentence-aware for dense unstructured text 
 _SENTENCE_SPLITTER = RecursiveCharacterTextSplitter(
     separators=[". ", "! ", "? ", "\n", " "],
     chunk_size=500,
